@@ -1,12 +1,15 @@
 const express = require('express')
 const jsonServer = require('json-server')
 const app = express()
+const path = require('path')
 const exercise_1 = require('./routes/exercise_1')
 const exercise_2 = require('./routes/exercise_2')
 const exercise_3 = require('./routes/exercise_3')
 const exercise_4 = require('./routes/exercise_4')
 const PORT = 5000;
+const files = require('./middleware/javascript_fn')
 
+app.use(express.static('exercise'))
 app.use('/api', jsonServer.router('db.json'));
 //app.use('/api', jsonServer.defaults());
 
