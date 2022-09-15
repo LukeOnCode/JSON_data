@@ -14,11 +14,9 @@ app.use(express.static('exercise'))
 app.use('/api', jsonServer.router('db.json'))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-//app.use('/api', jsonServer.defaults());
+app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
-app.get('/index', (req, res)=>{
-    res.status(200).json('')
-})
+//app.use('/api', jsonServer.defaults());
 
 //define routes
 app.use('/index/exercise_1', exercise_1)
@@ -26,6 +24,7 @@ app.use('/index/exercise_2', exercise_2)
 app.use('/index/exercise_3', exercise_3)
 app.use('/index/exercise_4', exercise_4)
 
-app.listen(PORT, ()=>{
+app.listen(PORT, (err)=>{
+    if (err) throw err;
     console.log(`APP LISTENING ON ${PORT}`);
 })
