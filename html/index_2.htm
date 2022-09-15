@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript JSON</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
         body{
@@ -18,14 +20,22 @@
         }
     </style>
 </head>
-    <body>  
+<body>  
+
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">JSON AJAX REQUEST</a>
+            </div>
+        </nav>
+    <div class="container">
         <h1>JSON</h1>
-        <div>
-            <select name="file" id="select_function"></select>
-        </div>
-        <input type="text" class="val">
+        <input type="text" placeholder="Hello World" class="val">
         <button class="btn">Click</button>
+    </div>
+    <div class="container">
         <div class="output"></div>
-        <script src="./exercise/index_2.js"></script>
-    </body>
+    </div>
+
+    <script src="../index_2.js"></script>
+</body>
 </html>
