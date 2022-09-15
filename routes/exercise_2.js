@@ -1,10 +1,12 @@
+
 const express = require('express');
 const router = express.Router();
-
-// @route GET /exercise_1
+const path = require('path');
+const htmlPath = path.join(path.resolve(__dirname, '..', 'html/index_2.htm'));
+// @route GET /exercise_2
 
 router.get('/', ( req, res ) => { 
-    res.send('exercise 1')
+  res.sendFile(htmlPath)
 })
 
 module.exports = router;

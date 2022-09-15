@@ -8,9 +8,12 @@ const exercise_3 = require('./routes/exercise_3')
 const exercise_4 = require('./routes/exercise_4')
 const PORT = 5000;
 const files = require('./middleware/javascript_fn')
+const bodyParser = require('body-parser')
 
 app.use(express.static('exercise'))
-app.use('/api', jsonServer.router('db.json'));
+app.use('/api', jsonServer.router('db.json'))
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 //app.use('/api', jsonServer.defaults());
 
 app.get('/index', (req, res)=>{
