@@ -1,5 +1,4 @@
 const btn = document.querySelector('.btn');
-var done = false;
 const urls = [
     {
         'url': 'http://localhost:5000/api/exercise_2',
