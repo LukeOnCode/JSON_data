@@ -7,6 +7,7 @@ const exercise_2 = require('./routes/exercise_2')
 const exercise_3 = require('./routes/exercise_3')
 const exercise_4 = require('./routes/exercise_4')
 const exercise_5 = require('./routes/exercise_5')
+const exercise_6 = require('./routes/exercise_6')
 const PORT = 5000;
 const files = require('./middleware/javascript_fn')
 const bodyParser = require('body-parser')
@@ -25,6 +26,7 @@ app.use('/index/exercise_2', exercise_2)
 app.use('/index/exercise_3', exercise_3)
 app.use('/index/exercise_4', exercise_4)
 app.use('/index/exercise_5', exercise_5)
+app.use('/index/exercise_6', exercise_6)
 
 app.listen(PORT, (err)=>{
     if (err) throw err;
