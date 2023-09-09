@@ -3,6 +3,8 @@ const jsonServer = require("json-server");
 const app = express();
 const path = require("path");
 
+const {wikimap} = require('./config');
+
 const index = require("./routes/index")
 const exercise_1 = require("./routes/exercise_1");
 const exercise_2 = require("./routes/exercise_2");

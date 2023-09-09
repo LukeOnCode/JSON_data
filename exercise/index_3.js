@@ -1,5 +1,5 @@
-const urlLon = `http://api.wikimapia.org/?key=${key}&function=place.getnearest&format=json`;
-const urlId = `http://api.wikimapia.org/?key=${key}&function=place.getbyid&format=json`;
+//const urlLon = `http://api.wikimapia.org/?key=${chiave}&function=place.getnearest&format=json`;
+//const urlId = `http://api.wikimapia.org/?key=${key}&function=place.getbyid&format=json`;
 
 const btnLon = document.querySelector('.btn-lonlat');
 const btnId = document.querySelector('.btn-id');
@@ -11,37 +11,32 @@ const h1 = document.querySelector('h1');
 btnLon.textContent = 'Search Map Lon Lat';
 btnId.textContent = 'Search by id';
 
-btnLon.addEventListener('click',(e)=>{
+btnLon.addEventListener('click', e => {
     let lon = inputVal2.value;
     let lat = inputVal.value;
-    let tempURL = `${urlLon}&lat=${lat}&lon=${lon}`;
-    console.log(tempURL);
-    fetch(tempURL)
-    .then( (res) => res.json())
-    .then( (data) => {
-        console.log(data);
-        output.innerHTML = '';
-        loopArray(data.places);
-    })
-    .catch((err)=>{
-        console.log(err);
-    })
+    fetch('http://localhost:5000/KEY')
+    .then((res) => res.json())
+    .then((data) => { 
+        fetch(`http://api.wikimapia.org/?key=${data.key}&function=place.getnearest&format=json&lat=${lat}&lon=${lon}`)
+        .then((res) => res.json())
+        .then((data) => { console.log(data); output.innerHTML=''; loopArray(data.places);})
+        .catch((err) => {
+            console.log(err + " wikimap err");
+        })
+    }).catch((err) => console.log(err + " localhost err"))
 })
 
-btnId.addEventListener('click',(e)=>{
-
-    let tempURL = `${urlId}&id=${51}`;
-    console.log(tempURL);
-    fetch(tempURL)
-    .then( (res) => res.json())
-    .then( (data) => {
-        console.log(data);
-        output.innerHTML = '';
-        loopObject(data)
-    })
-    .catch((err)=>{
-        console.log(err);
-    })
+btnId.addEventListener('click', e => {
+    fetch('http://localhost:5000/KEY')
+    .then((res) => res.json())
+    .then((data) => { 
+        fetch(`http://api.wikimapia.org/?key=${data.key}&function=place.getbyid&format=json&id=${51}`)
+        .then((res) => res.json())
+        .then((data) => { console.log(data); output.innerHTML=''; loopObject(data);})
+        .catch((err) => {
+            console.log(err + " wikimap err");
+        })
+    }).catch((err) => console.log(err + " localhost err"))
 })
 
 const loopArray = data => {
