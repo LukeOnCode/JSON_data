@@ -1,0 +1,123 @@
+/* basic HTMLelements */
+body{
+    margin: 0;
+    font-size: 36px;
+    font-family: 'Lato', sans-serif;
+    color: black;
+}
+button{
+    background: #eee !important;
+}
+ul{
+    font-size: 36px;
+    text-align: initial;
+    margin: 0;
+    padding-top: .5em;
+}
+li{
+    font-size: .5em;
+}
+
+h1{
+    font-size: 1em;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+h2{
+    font-size: .7em;
+    margin: 0;
+    height: 60px;
+}
+p{
+    font-size: .5em;
+    margin: 0;
+}
+img{
+    max-width: 100%;
+}
+
+section{
+
+}
+
+/* Basic project class */
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+}
+.select-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.column{
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-start;
+}
+.col{
+    width: 30%
+}
+.card{
+    padding: .5em;
+    text-align: center;
+
+}
+.caption{
+    padding: .5em 0;
+    text-align: initial;
+    border-bottom: 1px solid black;
+    height: 6em;
+}
+.link{
+    font-size: .5em;
+    padding: .5em;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    text-transform: uppercase;
+    background-color: #6C969D;
+}
+
+
+/* Custom project class */
+.name{
+    transition: display 1s;
+}
+.no-content{
+    display: none;
+}
+.content{
+    display: block;
+    animation-name: create-content;
+    animation-duration: 0.5s;
+    animation-fill-mode: backwards;
+    animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+}
+.sectionOne{
+    background: #6C969D;
+}
+.sectionTwo{
+}
+
+.sectionThree{
+    background: #6C969D;
+    padding: 1em;
+}
+
+
+
+/* KEYFRAMES */
+@keyframes create-content {
+    0%   { 
+        opacity: 0; 
+        transform: scale(0.5, 0.5);
+    }
+    100% { 
+        opacity: 1; 
+        transform: scale(1,1)
+    }
+}

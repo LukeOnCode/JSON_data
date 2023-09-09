@@ -1,26 +1,24 @@
-console.log('this is a log');
 const url = 'http://localhost:5000/api/exercise_1';
 
-const btn = document.querySelector('.btn');
+const buttonGet = document.querySelector('.btn-get');
 const output = document.querySelector('.output');
 const inputVal = document.querySelector('.val');
 
 let attemptCounter = false;
 inputVal.style.display = 'none';
-btn.style.backgroundColor = '#eee'
-btn.textContent = 'Load JSON data';
+buttonGet.textContent = 'Load JSON data';
 
-btn.addEventListener('click',(e)=>{
+buttonGet.addEventListener('click',(e)=>{
     e.preventDefault();
     console.log(e)
-    if(btn.classList.contains('active')){
+    if(buttonGet.classList.contains('active')){
         removejson();
     }else{
         getData(url);
     }
 })
 
-function getData( urlPath ) {
+const getData =  urlPath => {
     fetch( urlPath )
     .then( rep => {
         return rep.json()
@@ -30,33 +28,55 @@ function getData( urlPath ) {
     })
     .catch( err => {
         if( !attemptCounter ){
-            getData( localUrl );
+            console.log('getData( localUrl );');
         }
     attemptCounter = true;
     console.log(err);
     })
 }
 
-function maker(data){
-    output.innerHTML = '<h1>JSON Data</h1>';
-    btn.textContent = 'Remove JSON data'
-    btn.classList.add('active');
-    
+const maker = data => {
+    const createDivElem = (output, el) => {
+        //parent
+        let parentDiv = document.createElement('div');
+        parentDiv.classList.add('parent-list');
+
+
+        //name
+        let divOfName = document.createElement('div')
+        let divTextName = document.createTextNode(`${el.name.first } ${el.name.last}`);
+        divOfName.classList.add('name','content');
+        divOfName.appendChild(divTextName);
+
+        //city
+        let divOfCity = document.createElement('div')
+        let divTextCity = document.createTextNode(`${el.location.city} ${el.location.country}`);
+        divOfCity.classList.add('city','content');
+        divOfCity.appendChild(divTextCity);
+
+        //age
+        let divOfAge = document.createElement('div')
+        let divTextAge = document.createTextNode(`${el.age }`);
+        divOfAge.classList.add('name','content');
+        divOfAge.appendChild(divTextAge);
+        
+        parentDiv.prepend(divOfName, divOfCity, divOfAge)
+        output.prepend(parentDiv);
+    }
+
+    //output.innerHTML = '<h1>JSON Data</h1>';
+    buttonGet.textContent = 'Remove JSON data'
+    buttonGet.classList.add('active');
+
     data.forEach(( el, index ) => {
-        const bg = index % 2 == 0 ? '#eee' : '#fff';
-        const div = document.createElement('div');
-        div.style.backgroundColor = bg;
-        div.innerHTML += `<div>${el.name.first} ${el.name.last}</div>`;
-        div.innerHTML += `<div>${el.location.city} ${el.location.country}</div>`;
-        div.innerHTML += `<div>${el.age} </div>`;
-        output.append(div);
+        createDivElem(output, el);
     });
 }
 
-function removejson(){
-    if(btn.classList.contains('active')){
-        output.innerHTML='';
-        btn.classList.remove('active');
-        btn.textContent='Load JSON data'
+const removejson = () => {
+    if(buttonGet.classList.contains('active')){
+        buttonGet.classList.remove('active');
+        buttonGet.textContent='Load JSON data';
+        output.innerHTML= '';
     }
 }

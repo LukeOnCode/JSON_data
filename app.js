@@ -2,6 +2,8 @@ const express = require("express");
 const jsonServer = require("json-server");
 const app = express();
 const path = require("path");
+
+const index = require("./routes/index")
 const exercise_1 = require("./routes/exercise_1");
 const exercise_2 = require("./routes/exercise_2");
 const exercise_3 = require("./routes/exercise_3");
@@ -24,10 +26,12 @@ app.use("/api", jsonServer.router("db.json"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use("/css", express.static(__dirname + "/node_modules/bootstrap/dist/css"));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //app.use('/api', jsonServer.defaults());
 
 //define routes
+app.use("/", index);
 app.use("/index/exercise_1", exercise_1);
 app.use("/index/exercise_2", exercise_2);
 app.use("/index/exercise_3", exercise_3);
