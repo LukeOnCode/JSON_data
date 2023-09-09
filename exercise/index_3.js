@@ -1,4 +1,3 @@
-const key= '4104FC03-916F936F-D009592C-6D588948-68EBFF38-74350974-BD66C62A-AD0C275';
 const urlLon = `http://api.wikimapia.org/?key=${key}&function=place.getnearest&format=json`;
 const urlId = `http://api.wikimapia.org/?key=${key}&function=place.getbyid&format=json`;
 
