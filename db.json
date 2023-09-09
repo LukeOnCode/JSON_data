@@ -32,6 +32,72 @@
             "city": "New York",
             "country": "USA"
          }
+      },
+      {
+         "name": {
+            "first": "Rick",
+            "last": "Novak"
+         },
+         "age": 44,
+         "location": {
+            "city": "Madrid",
+            "country": "SP"
+         }
+      },
+      {
+         "name": {
+            "first": "Susan",
+            "last": " Connor"
+         },
+         "age": 51,
+         "location": {
+            "city": "Paris",
+            "country": "FR"
+         }
+      },
+      {
+         "name": {
+            "first": "Margaret",
+            "last": "Adelman"
+         },
+         "age": 35,
+         "location": {
+            "city": "Milan",
+            "country": "IT"
+         }
+      },
+      {
+         "name": {
+            "first": "Ronald",
+            "last": "Barr"
+         },
+         "age": 38,
+         "location": {
+            "city": "Venice",
+            "country": "IT"
+         }
+      },
+      {
+         "name": {
+            "first": "Marie",
+            "last": "Broadbet"
+         },
+         "age": 40,
+         "location": {
+            "city": "Lion",
+            "country": "FR"
+         }
+      },
+      {
+         "name": {
+            "first": "Roger",
+            "last": "Lum"
+         },
+         "age": 48,
+         "location": {
+            "city": "Amsterdam",
+            "country": "NL"
+         }
       }
    ],
    "exercise_2": [
