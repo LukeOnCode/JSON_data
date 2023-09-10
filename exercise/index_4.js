@@ -22,6 +22,7 @@ const btnBook   = document.querySelector('.btn-book');
 const btnFriend = document.querySelector('.btn-friend');
 const btnCrypto = document.querySelector('.btn-crypto');
 const btnSearch = document.querySelector('.btn-search');
+const fragment = document.createDocumentFragment();
 
 btnSearch.addEventListener('click', e => {
     e.preventDefault();
@@ -42,14 +43,16 @@ const searchUrl = (element, url, value) => {
 
 const createNode = (data, objectName, value) => {
     //fragment
-    const fragment = document.createDocumentFragment();
-
-    const createParent = (a, b, c, d, e, f, g, h ) => {
+    const createParent = (...array) => {
         const parentDiv = document.createElement('div')
         parentDiv.classList.add('parent-list')
-        parentDiv.append(a, b, c)
-        output.append(parentDiv)
+
+        array.forEach(el => {
+            parentDiv.append(el);
+            output.append(parentDiv)
+        })
     }    
+
     //book
     let titleText;
     let authorText;
@@ -103,7 +106,9 @@ const createNode = (data, objectName, value) => {
             cryptoNameComponent.appendChild(cryptoNameText)
             cryptoSymbolComponent.appendChild(cryptoSymbolText)
             cryptoDataComponent.appendChild(cryptoDataText)
-  
+            
+            let arrayPerson= new Array(peopleNamecomponent,peopleLastNamecomponent);
+
             switch (data[objectName]) {
                 case data.books:
                     createParent(bookTitlecomponent, bookAuthorcomponent, bookISBNcomponent)
@@ -120,7 +125,10 @@ const createNode = (data, objectName, value) => {
         }
         book(element);
     })
+
+output.appendChild(fragment)
 }
+
 /*
 function maker(arr, category) {
     let input_value = searchWord.value;
