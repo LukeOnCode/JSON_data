@@ -6,31 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript JSON</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
-
+    <link rel="stylesheet" href="/stylesheet/style.css"  />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
         body{
             font-family: 'Potta One', cursive;
         }
-        .output{
-            font-size: 1.2em;
-            margin:auto;
-            padding:10px;
-        }
     </style>
 </head>
 <body>  
 
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">JSON AJAX REQUEST</a>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">JSON AJAX REQUEST</a>
+        </div>
+    </nav>
+    
+    <div class="sectionOne">
+        <div class="container">
+            <h1>JSON</h1>
+            <div class="column">
+                <div class="col">
+                    <button class="btn btn-book btn-large"  >Book</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-friend btn-large">friend</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-crypto btn-large">crypto</button>
+                </div>
             </div>
-        </nav>
-    <div class="container">
-        <h1>JSON</h1>
-        <input type="text" placeholder="Learn to Code" class="val">
-        <button class="btn">Click</button>
+
+            <div class="column">
+                <div class="col full-width">
+                    <input type="text" placeholder="Learn to code" value="Learn to code" class="search-word" />
+                    <button class="btn btn-search">Click</button>
+                </div>
+            </div>
+
+        </div>
     </div>
+
     <div class="container">
         <div class="output"></div>
     </div>

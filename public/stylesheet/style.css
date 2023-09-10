@@ -12,6 +12,8 @@ button{
     vertical-align: bottom !important;
 }
 input{
+    border-radius: 8px;
+    border: 0px solid black;
 }
 ul{
     font-size: 36px;
@@ -46,6 +48,24 @@ section{
 }
 
 /* Basic project class */
+.btn-medium{
+    width: 50%;
+}
+.btn-large{
+    width: 100%;
+}
+button.btn-active{
+    border: 1px solid green;
+}
+    button.btn-deactive{
+    border: 1px solid red;
+}
+input.active{
+    background: green;
+}
+input.disactive{
+    background: red;
+}
 .container{
     max-width: 1200px;
     margin: 0 auto;
@@ -61,6 +81,7 @@ section{
     display: flex;
     justify-content:space-between;
     align-items: flex-start;
+    margin-bottom: 1em;
 }
 .column.vertical-column{
     flex-direction: column;
