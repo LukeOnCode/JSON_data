@@ -9,6 +9,9 @@ button{
     background: #eee !important;
     padding: 1em !important;
     width: 150px;
+    vertical-align: bottom !important;
+}
+input{
 }
 ul{
     font-size: 36px;
@@ -59,8 +62,16 @@ section{
     justify-content:space-between;
     align-items: flex-start;
 }
+.column.vertical-column{
+    flex-direction: column;
+}
 .col{
-    width: 30%
+    width: 30%;
+    flex: none !important;
+}
+.col.full-width{
+    width: 100%;
+    margin-bottom: 0.3em;
 }
 .card{
     padding: .5em;
@@ -108,6 +119,9 @@ section{
     justify-content: space-between;
     align-items: flex-start;
     text-align: center;
+}
+.parent-list:nth-child(odd){
+    background: #6C969D;
 }
 .component{
     width: 30%;

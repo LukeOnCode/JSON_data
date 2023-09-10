@@ -6,34 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript JSON</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheet/style.css" />
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
         body{
             font-family: 'Potta One', cursive;
         }
-        .output{
-            font-size: 1.2em;
-            width:80%;
-            margin:auto;
-            padding:10px;
-        }
     </style>
 </head>
 <body>  
 
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">JSON AJAX REQUEST</a>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">JSON AJAX REQUEST</a>
+        </div>
+    </nav>
+
+    <div class="sectionOne">
+        <div class="container">
+            <h1>JSON</h1>
+            <div class="column vertical-column">
+                <div class="col full-width">
+                    <input type="text" value='31.1341877' placeholder="2.34957 LON" class="lon" />
+                    <input type="text" value='29.9791885' placeholder="45.9473 LAT" class="lat" />
+                    <button class="btn btn-lonlat">Click</button>
+                </div>
+                <div class="col full-width">
+                    <input type="text" value="51" placeholder="51" class="id">
+                    <button class="btn btn-id">Click</button>
+                </div>
             </div>
-        </nav>
-    <div class="container">
-        <h1>JSON</h1>
-        <input type="text" value='31.1341877' placeholder="2.34957 LON" class="val">
-        <input type="text" value='29.9791885' placeholder="45.9473 LAT" class="val2">
-        <button class="btn btn-lonlat">Click</button>
-        <button class="btn btn-id">Click</button>
+        </div>
     </div>
+
     <div class="container">
         <div class="output"></div>
     </div>

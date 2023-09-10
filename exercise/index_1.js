@@ -94,7 +94,7 @@ const maker = data => {
     }
 
     output.textContent = 'Active Users';
-    buttonGet.textContent = 'Remove user'
+    buttonGet.textContent = 'Hide user'
     buttonGet.classList.add('active');
 
     data.forEach(( el, index ) => {
