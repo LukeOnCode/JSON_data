@@ -22,34 +22,55 @@ const btnBook   = document.querySelector('.btn-book');
 const btnFriend = document.querySelector('.btn-friend');
 const btnCrypto = document.querySelector('.btn-crypto');
 const btnSearch = document.querySelector('.btn-search');
+
+
 const fragment = document.createDocumentFragment();
+
+//[btnBook,btnCrypto,btnFriend].forEach(e => console.log(e.className.includes('btn-crypto')))
 
 btnSearch.addEventListener('click', e => {
     e.preventDefault();
-    let value = searchWord.value;
-    urls.forEach(element => searchUrl(element, element.url, value));
-})
+    let values = searchWord.value;
+    [btnBook, btnCrypto, btnFriend].map((el) => {
+        if( el.className.includes('requested')){
+            let requestedUrl = el.id;
+            let iterator = urls.values();
+            for (const value of iterator) {
+                if (value.arr == requestedUrl){
+                    searchUrl(value.url, value.arr, values)
+                };
+            }
+        }
+    })
+});
 
-const searchUrl = (element, url, value) => {
-    fetch(url)
+
+//TODO PASS WRIGHT ELEMENT FOR MULTI OR SINGLE ELEMENTS element.arr 
+const searchUrl = (objectUrl, requestedUrl, value) => {
+    // console.log(objectUrl);
+    // console.log(requestedUrl);
+    // console.log(value);
+
+    fetch(objectUrl)
     .then(res => res.json())
     .then(data => {
         const finalData = data[Number(Object.keys(data))]
-        let category = element.arr;
-        let searchedValue = value;
-        createNode(finalData, category, searchedValue);
+        const searchedValue = value;
+           console.log(finalData)
+        // console.log(requestedUrl)
+        // console.log(searchedValue)
+        createNode(finalData, requestedUrl, searchedValue);
     }).catch(err => console.log(err));
 }
 
 const createNode = (data, objectName, value) => {
-    //fragment
     const createParent = (...array) => {
         const parentDiv = document.createElement('div')
         parentDiv.classList.add('parent-list')
 
         array.forEach(el => {
             parentDiv.append(el);
-            output.append(parentDiv)
+            fragment.append(parentDiv)
         })
     }    
 
@@ -66,8 +87,9 @@ const createNode = (data, objectName, value) => {
     let cryptoNameText;
     let cryptoSymbolText;
     let cryptoDataText;
-
+    console.log(data[objectName])
     data[objectName].forEach(element => {
+        //console.log(element)
         const book = element => {
             //book
             const bookTitlecomponent  = document.createElement('div');
@@ -107,8 +129,6 @@ const createNode = (data, objectName, value) => {
             cryptoSymbolComponent.appendChild(cryptoSymbolText)
             cryptoDataComponent.appendChild(cryptoDataText)
             
-            let arrayPerson= new Array(peopleNamecomponent,peopleLastNamecomponent);
-
             switch (data[objectName]) {
                 case data.books:
                     createParent(bookTitlecomponent, bookAuthorcomponent, bookISBNcomponent)
