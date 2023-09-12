@@ -6,7 +6,7 @@ body{
     color: black;
 }
 button{
-    background: #eee !important;
+    background: #eee;
     padding: 1em !important;
     width: 150px;
     vertical-align: bottom !important;
@@ -43,23 +43,21 @@ img{
     max-width: 100%;
 }
 
-section{
-
-}
-
 /* Basic project class */
 .btn-medium{
     width: 50%;
 }
 .btn-large{
+    background: #eee;
     width: 100%;
 }
-button.btn-active{
-    border: 1px solid green;
+button.btn-search{
+    background: #eee;
 }
-    button.btn-deactive{
-    border: 1px solid red;
+button.requested{
+    background: green;    
 }
+
 input.active{
     background: green;
 }
