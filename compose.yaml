@@ -1,0 +1,19 @@
+services:
+  backend:
+    build:
+      context: JSapp
+    command: npm run start   # The command to start your backend app
+    ports:
+      - "80:80"              # Expose port 80 of the container to port 80 on the host
+    depends_on:
+      - localdb            # Ensure backend starts after localDB
+    restart: unless-stopped  # Restart policy
+
+
+  localdb:
+    build:
+      context: LocalDB
+    command: npm run start    # If your DB needs to be started with `npm`, otherwise use the relevant DB start command
+    ports:
+      - "5000:5000"           # Expose port 5000 of the container to port 5000 on the host
+    restart: unless-stopped   # Restart policy

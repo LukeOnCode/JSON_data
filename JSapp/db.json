@@ -1,0 +1,193 @@
+{
+   "exercise_1": [
+      {
+         "name": {
+            "first": "Laurence",
+            "last": "Svekis"
+         },
+         "age": 40,
+         "location": {
+            "city": "Toronto",
+            "country": "Canada"
+         }
+      },
+      {
+         "name": {
+            "first": "Lisa",
+            "last": "Suekis"
+         },
+         "age": 30,
+         "location": {
+            "city": "New York",
+            "country": "USA"
+         }
+      },
+      {
+         "name": {
+            "first": "Johyn",
+            "last": "Sekis"
+         },
+         "age": 50,
+         "location": {
+            "city": "New York",
+            "country": "USA"
+         }
+      },
+      {
+         "name": {
+            "first": "Rick",
+            "last": "Novak"
+         },
+         "age": 44,
+         "location": {
+            "city": "Madrid",
+            "country": "SP"
+         }
+      },
+      {
+         "name": {
+            "first": "Susan",
+            "last": " Connor"
+         },
+         "age": 51,
+         "location": {
+            "city": "Paris",
+            "country": "FR"
+         }
+      },
+      {
+         "name": {
+            "first": "Margaret",
+            "last": "Adelman"
+         },
+         "age": 35,
+         "location": {
+            "city": "Milan",
+            "country": "IT"
+         }
+      },
+      {
+         "name": {
+            "first": "Ronald",
+            "last": "Barr"
+         },
+         "age": 38,
+         "location": {
+            "city": "Venice",
+            "country": "IT"
+         }
+      },
+      {
+         "name": {
+            "first": "Marie",
+            "last": "Broadbet"
+         },
+         "age": 40,
+         "location": {
+            "city": "Lion",
+            "country": "FR"
+         }
+      },
+      {
+         "name": {
+            "first": "Roger",
+            "last": "Lum"
+         },
+         "age": 48,
+         "location": {
+            "city": "Amsterdam",
+            "country": "NL"
+         }
+      }
+   ],
+   "exercise_2": [
+      {
+         "crypto": [
+            {
+               "id": 1,
+               "name": "Bitcoin",
+               "symbol": "BTC",
+               "slug": "bitcoin",
+               "is_active": 1,
+               "first_historical_data": "2013-04-28T18:47:21.000Z",
+               "last_historical_data": "2019-04-05T20:44:01.000Z",
+               "platform": null
+            },
+            {
+               "id": 825,
+               "name": "Tether",
+               "symbol": "USDT",
+               "slug": "tether",
+               "is_active": 1,
+               "first_historical_data": "2015-02-25T13:34:26.000Z",
+               "last_historical_data": "2019-04-05T20:44:01.000Z",
+               "platform": {
+                  "id": 83,
+                  "name": "Omni",
+                  "symbol": "OMNI",
+                  "slug": "omni",
+                  "token_address": "31"
+               }
+            },
+            {
+               "id": 1839,
+               "name": "Binance Coin",
+               "symbol": "BNB",
+               "slug": "binance-coin",
+               "is_active": 1,
+               "first_historical_data": "2017-07-25T04:30:05.000Z",
+               "last_historical_data": "2019-04-05T20:44:02.000Z",
+               "platform": {
+                  "id": 1027,
+                  "name": "Ethereum",
+                  "symbol": "ETH",
+                  "slug": "ethereum",
+                  "token_address": "0xB8c77482e45F1F44dE1745F52C74426C631bDD52"
+               }
+            }
+         ],
+         "status": {
+            "timestamp": "2018-06-02T22:51:28.209Z",
+            "error_code": 0,
+            "error_message": "",
+            "elapsed": 10,
+            "credit_count": 1
+         },
+         "books": [
+            {
+               "title": "Learn to Code",
+               "author": "John Smith",
+               "isbn": "324-23243"
+            },
+            {
+               "title": "The Adventures JSON",
+               "author": "Jason Jones",
+               "isbn": "3324-2-444"
+            },
+            {
+               "title": "New Objects",
+               "author": "Jane Doe",
+               "isbn": "2343-234-2433"
+            }
+         ],
+         "people": [
+            {
+               "first": "Laurence",
+               "last": "Svekis"
+            },
+            {
+               "first": "Laurenc",
+               "last": "Svekis"
+            },
+            {
+               "first": "Lauren",
+               "last": "Svekis"
+            },
+            {
+               "first": "Laure",
+               "last": "Svekis"
+            }
+         ]
+      }
+   ]
+}

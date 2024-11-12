@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript JSON</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/stylesheet/style.css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+        body{
+            font-family: 'Potta One', cursive;
+        }
+        form{
+            display:none;
+            
+        }
+        form.active{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .form-container > form{
+            display: block;
+            margin: 0 auto;
+            /* justify-content: space-between;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center; */
+        }
+        #userForm > div{
+            margin:10px;
+            border: 1px black solid;
+            border-radius: 8px;
+        }
+        div.submit > button{
+            width: 100%;
+            border-radius: 8px;
+            border: 0px black solid;
+            opacity: 0.5;
+            background: cadetblue;
+        }
+        .output > div {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            align-content: space-between;
+            justify-content: space-between;
+        }
+        span.update > i{
+            transition: transform 0.5s ease;
+        }
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>  
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">JSON PRACTICE EXERCISE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="sectionOne">
+        <div class="container">
+            <h1>JSON</h1>
+            <div class="select-button">
+                <button class="btn btn-get">get</button>
+                <button class="btn btn-update">Update user</button>
+                <button class="btn btn-remove">Remove user</button>
+                <button class="btn btn-create">Create user</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="output"></div>
+    </div>
+
+    <script src="../index_1.js"></script>
+</body>
+</html>

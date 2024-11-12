@@ -1,0 +1,179 @@
+{
+  "exercise_1": [
+    {
+      "name": {
+        "first": "Alice Ecila",
+        "last": "Novak"
+      },
+      "age": 33,
+      "location": {
+        "city": "Tokyo",
+        "country": "JP"
+      },
+      "id": "u5sd"
+    },
+    {
+      "name": {
+        "first": "Chalilla",
+        "last": "Kane"
+      },
+      "age": 41,
+      "location": {
+        "city": "Paris",
+        "country": "FR"
+      },
+      "id": "w8dk"
+    },
+    {
+      "name": {
+        "first": "Jamiens",
+        "last": "Williams"
+      },
+      "age": 24,
+      "location": {
+        "city": "Moscow",
+        "country": "RU"
+      },
+      "id": "a6lm"
+    },
+    {
+      "name": {
+        "first": "Rick O",
+        "last": "Miuller"
+      },
+      "age": 49,
+      "location": {
+        "city": "Berlin",
+        "country": "DE"
+      },
+      "id": "p2rt"
+    },
+    {
+      "name": {
+        "first": "Olivia Mendez",
+        "last": "Martinex"
+      },
+      "age": 30,
+      "location": {
+        "city": "Rome",
+        "country": "IT"
+      },
+      "id": "k4jx"
+    },
+    {
+      "name": {
+        "first": "Daviddos",
+        "last": "Taylor"
+      },
+      "age": 36,
+      "location": {
+        "city": "Los Angeles",
+        "country": "US"
+      },
+      "id": "g8u2"
+    },
+    {
+      "id": "uv13",
+      "name": {
+        "first": "ABCD",
+        "last": "DCBA"
+      },
+      "age": 22,
+      "location": {
+        "city": "Pavia",
+        "country": "IT"
+      }
+    }
+  ],
+  "exercise_2": [
+    {
+      "crypto": [
+        {
+          "id": 1,
+          "name": "Bitcoin",
+          "symbol": "BTC",
+          "slug": "bitcoin",
+          "is_active": 1,
+          "first_historical_data": "2013-04-28T18:47:21.000Z",
+          "last_historical_data": "2019-04-05T20:44:01.000Z",
+          "platform": null
+        },
+        {
+          "id": 825,
+          "name": "Tether",
+          "symbol": "USDT",
+          "slug": "tether",
+          "is_active": 1,
+          "first_historical_data": "2015-02-25T13:34:26.000Z",
+          "last_historical_data": "2019-04-05T20:44:01.000Z",
+          "platform": {
+            "id": 83,
+            "name": "Omni",
+            "symbol": "OMNI",
+            "slug": "omni",
+            "token_address": "31"
+          }
+        },
+        {
+          "id": 1839,
+          "name": "Binance Coin",
+          "symbol": "BNB",
+          "slug": "binance-coin",
+          "is_active": 1,
+          "first_historical_data": "2017-07-25T04:30:05.000Z",
+          "last_historical_data": "2019-04-05T20:44:02.000Z",
+          "platform": {
+            "id": 1027,
+            "name": "Ethereum",
+            "symbol": "ETH",
+            "slug": "ethereum",
+            "token_address": "0xB8c77482e45F1F44dE1745F52C74426C631bDD52"
+          }
+        }
+      ],
+      "status": {
+        "timestamp": "2018-06-02T22:51:28.209Z",
+        "error_code": 0,
+        "error_message": "",
+        "elapsed": 10,
+        "credit_count": 1
+      },
+      "books": [
+        {
+          "title": "Learn to Code",
+          "author": "John Smith",
+          "isbn": "324-23243"
+        },
+        {
+          "title": "The Adventures JSON",
+          "author": "Jason Jones",
+          "isbn": "3324-2-444"
+        },
+        {
+          "title": "New Objects",
+          "author": "Jane Doe",
+          "isbn": "2343-234-2433"
+        }
+      ],
+      "people": [
+        {
+          "first": "Laurence",
+          "last": "Svekis"
+        },
+        {
+          "first": "Laurenc",
+          "last": "Svekis"
+        },
+        {
+          "first": "Lauren",
+          "last": "Svekis"
+        },
+        {
+          "first": "Laure",
+          "last": "Svekis"
+        }
+      ],
+      "id": "d0c9"
+    }
+  ]
+}
