@@ -36,13 +36,13 @@
         <div id="colonne" class="container">
             <div class="row">
                 <% exercise.forEach(function(item) { %> 
-                    <div class="col-md-4">
-                        <div class="card mb-4">
+                    <div class="col-md-4 mt-0 mb-3">
+                        <div class="card mb-4 d-flex flex-column align-content-center h-100">
                             <img src="https://via.placeholder.com/350x250" class="card-img-top">
-                            <div class="card-body">
+                            <div class="card-body  d-flex flex-column">
                                 <h5 class="card-title"> <%= item.title %></h5>
-                                <p class="card-text"><%= item.description %></p>
-                                <a href="<%= item.link%>" class="btn btn-primary"><%= item.button %></a>
+                                <p class="card-text h-10"><%= item.description %></p>
+                                <a href="<%= item.link%>" class="btn btn-primary w-100 mt-auto"><%= item.button %></a>
                             </div>
                         </div>
                     </div>
