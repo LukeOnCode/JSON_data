@@ -7,8 +7,9 @@
     <!-- Aggiungi il link a Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">JS</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,33 +26,37 @@
         </div>
     </nav>
 
-    <div class="container text-center my-5">
-        <h1 class="display-4"><%= h1 %></h1>
-        <p class="lead"><%= lead %></p>
-        <a href="#" class="btn btn-primary"><%= leadlist %> </a>
-    </div>
+    <!-- Contenuto principale -->
+    <main class="flex-grow-1">
+        <div class="container text-center my-5">
+            <h1 class="display-4"><%= h1 %></h1>
+            <p class="lead"><%= lead %></p>
+        </div>
 
-    <div id="colonne" class="container">
-        <div class="row">
-            <% exercise.forEach(function(item) { %> 
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="https://via.placeholder.com/350x250" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title"> <%= item.title %></h5>
-                            <p class="card-text"><%= item.description %></p>
-                            <a href="<%= item.link%>" class="btn btn-primary"><%= item.button %></a>
+        <div id="colonne" class="container">
+            <div class="row">
+                <% exercise.forEach(function(item) { %> 
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="https://via.placeholder.com/350x250" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title"> <%= item.title %></h5>
+                                <p class="card-text"><%= item.description %></p>
+                                <a href="<%= item.link%>" class="btn btn-primary"><%= item.button %></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <% }) %>
+                <% }) %>
+            </div>
         </div>
-    </div>
+    </main>
 
-    <footer class="bg-light text-center py-3">
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3 mt-auto">
         <p>&copy; 2024 Nome Azienda. Tutti i diritti riservati.</p>
     </footer>
 
+    <!-- Aggiungi Bootstrap JS e jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
