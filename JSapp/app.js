@@ -1,5 +1,4 @@
 const express = require("express");
-//const jsonServer = require("json-server");
 const app = express();
 const path = require("path");
 require('dotenv').config()
@@ -22,7 +21,6 @@ const files = require("./middleware/javascript_fn");
 const bodyParser = require("body-parser");
 
 app.use(express.static("exercise"));
-//app.use("/api", jsonServer.router("db.json"));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -30,7 +28,9 @@ app.use(bodyParser.json());
 app.use("/css", express.static(__dirname + "/node_modules/bootstrap/dist/css"));
 app.use(express.static(path.join(__dirname, 'public')));
 
-//app.use('/api', jsonServer.defaults());
+app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'html'))
+
 
 //define routes
 app.use("/", index);
